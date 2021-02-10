@@ -7,6 +7,8 @@ Use CLI on web! Customize your options!
 * Can customize fonts, colors, themes.
 * Sign in to save your settings.
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/72643027/107480807-8ab5df80-6bc0-11eb-9d96-cb9ee14e8e13.gif)
+
 ## Installation
 
 ### Environments
