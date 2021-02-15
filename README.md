@@ -23,4 +23,4 @@ Mojo Version 8.72
 
 ## License
 
-[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/DAVFoundation/captain-n3m0/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/gluesys/sshell.svg?style=flat-square)](https://github.com/gluesys/sshell/blob/main/LICENSE)
