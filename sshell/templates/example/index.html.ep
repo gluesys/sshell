@@ -1,0 +1,54 @@
+<!doctype html><html>
+    <head>
+        <title>Showmetheshell</title>
+        <link rel="stylesheet" href="/styles.css" type="text/css" />
+        <script type="text/javascript" src="/jquery.js"></script>
+        <script type="text/javascript" src="/jquery.json.js"></script>
+        <script type="text/javascript" src="/shell.js"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                var socket = new WebSocket("ws://localhost:3000");
+
+                var shell  = new Shell();
+                socket.onopen = function(event) {
+                    console.log('socket opend')
+                    shell.init();
+                }
+
+                socket.onmessage = function (e) {
+                    if (typeof e == 'undefined' || e === null)
+                        return;
+
+                    var data = JSON.parse(e.data);
+
+                    switch(data.type){
+                        case 'history':
+                            for (var i=0;i < data.history.lengh; i++>){
+                                shell.updateRow(i+1, data.history[i]);
+                            }
+                            break;
+                        case 'row':
+                            shell.updateRow(data.row, data.text);
+                            break;
+                        case 'cursur':
+                            break;
+
+                    }
+
+               }
+
+                shell.onsend = function(message) {
+                    socket.send(message);
+                };
+
+            });
+        </script>
+    </head>
+    <body>
+        <div id="disconnect"></div>
+        <div id="container">
+            Connecting...
+        </div>
+    </body>
+</html>
