@@ -24,7 +24,7 @@
 
                     switch(data.type){
                         case 'history':
-                            for (var i=0;i < data.history.lengh; i++>){
+                            for (var i=0;i < data.history.lengh; i++){
                                 shell.updateRow(i+1, data.history[i]);
                             }
                             break;
