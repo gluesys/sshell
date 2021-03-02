@@ -12,7 +12,7 @@
 |              | Customize      | customize font, background color |
 | Customize themes | Customize preview | Show preview based on present font, </br>background color |
 |                  | Save customization | Save present font, background color |
-<br/>
+---
 
 ## REST API
 ```
