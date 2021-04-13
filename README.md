@@ -41,3 +41,5 @@ Mojo Version 8.72
 ## License
 
 [![license](https://img.shields.io/github/license/gluesys/sshell.svg?style=flat-square)](https://github.com/gluesys/sshell/blob/main/LICENSE)
+
+asd
